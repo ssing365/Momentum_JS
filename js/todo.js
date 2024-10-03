@@ -16,16 +16,23 @@ function deleteToDo(event) {
   //부모 element를 찾기
   const li = event.target.parentElement;
   li.remove();
+
+  //filter함수를 이용해 새로운 array로 갱신하고 저장
+  toDos = toDos.filter((todo) => todo.id !== parseInt(li.id));
+  saveToDo();
+
 }
 
 //to-do list에 출력
-function paintToDo(newToDo) {
+function paintToDo(newToDoObj) {
   const list = document.createElement("li");
+  list.id = newToDoObj.id;
   const span = document.createElement("span");
-  span.innerText = newToDo;
+  span.innerText = newToDoObj.text;
+
   const delBtn = document.createElement("button");
   delBtn.innerText = "❌";
-
+  delBtn.id = newToDoObj.id;
   delBtn.addEventListener("click", deleteToDo);
 
   list.appendChild(span);
@@ -39,8 +46,12 @@ function handleToDoForm(event) {
 
   const newToDo = toDoInput.value;
   toDoInput.value = "";
-  toDos.push(newToDo);
-  paintToDo(newToDo);
+  const newToDoObj = {
+    id: Date.now(),
+    text: newToDo,
+  }
+  toDos.push(newToDoObj);
+  paintToDo(newToDoObj);
   saveToDo();
 }
 
@@ -54,7 +65,7 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos !== null) {
   //단순 string형태의 value를 사용할 수 있는 object(array)로 parsing
   const parsedToDos = JSON.parse(savedToDos);
-  
+
   //이전 to-do list 가져오기
   toDos = parsedToDos;
 
