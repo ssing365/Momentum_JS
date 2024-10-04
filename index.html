@@ -8,6 +8,18 @@
   </head>
   <body>
 
+    <header>
+      <!--현재 시각-->
+      <h2 id="clock"></h2>
+
+      <!--현재 위치 및 날씨-->
+      <div id="weather">
+        <h3 id="city"></h3>
+        <span id="weather_description"></span>
+        <span id="temp"></span>
+      </div>
+    </header>
+
     <!--사용자 이름 입력(로그인) 폼-->
     <form id="login-form" class="hidden">
       <input
@@ -19,32 +31,29 @@
       <input type="submit" value="Log In" />
     </form>
 
-    <!--현재 시각-->
-    <h2 id="clock"></h2>
-
     <!--사용자에게 인사-->
     <h1 id="greeting" class="hidden"></h1>
 
     <!--To Do list 입력폼-->
     <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required>
+      <input type="text" placeholder="Write a To Do and Press Enter" required />
     </form>
     <!--To Do list-->
     <ul id="todo-list"></ul>
-    
+
     <!--명언-->
     <div id="quote">
       <span></span>
-      <br>
+      <br />
       <span></span>
     </div>
-    
+
     <!--JS파일 임포트-->
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/bgimg.js"></script>
     <script src="js/todo.js"></script>
-
+    <script src="js/weather.js"></script>
   </body>
 </html>

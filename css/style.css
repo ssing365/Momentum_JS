@@ -17,3 +17,16 @@ img {
 button{
   margin-left : 10px;
 }
+
+#clock{
+  display: inline-block;
+}
+
+header {
+  display: flex;
+}
+
+#weather {
+  margin-left: auto;
+  margin-right: 50px;
+}
