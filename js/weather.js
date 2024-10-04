@@ -17,7 +17,7 @@ function onGeoOk(position) { //성공 시 함수는 GeolocationPosition object �
       console.dir(data);
       city.innerHTML = data.name;
       weather_description.innerHTML = data.weather[0].description + ", ";
-      temp.innerHTML = data.main.temp  + "C";
+      temp.innerHTML = data.main.temp  + "°C";
     });
 }
 

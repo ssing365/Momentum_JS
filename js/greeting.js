@@ -2,7 +2,10 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = loginForm.querySelector("input");
 const loginButton = loginForm.querySelector("button");
 
-const greet_h1 = document.querySelector("#greeting");
+const greet = document.querySelector("#greet");
+const greeting = document.querySelector("#greeting");
+const question = document.querySelector("#todo_question");
+const dd = document.querySelector("#todo-form")
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -25,8 +28,10 @@ function onLoginSubmit(event) {
 }
 
 function greet_f(userName) {
-  greet_h1.classList.remove(HIDDEN_CLASSNAME);
-  greet_h1.innerHTML = `Hi, ${userName}.<br><br> What is your main goal for today?`;
+  greet.classList.remove(HIDDEN_CLASSNAME);
+  greeting.innerHTML = `Good afternoon, ${userName}.`;
+  question.innerHTML = `What is your main goal for today?`;
+  dd.classList.remove(HIDDEN_CLASSNAME);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
@@ -34,6 +39,6 @@ loginForm.addEventListener("submit", onLoginSubmit);
 if (saved_username === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
 } else {
-  greet_h1.classList.remove(HIDDEN_CLASSNAME);
+  greeting.classList.remove(HIDDEN_CLASSNAME);
   greet_f(saved_username);
 }

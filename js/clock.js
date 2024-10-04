@@ -5,9 +5,9 @@ function getTime(){
 
     Hour = String(date.getHours()).padStart(2,'0');
     Min = String(date.getMinutes()).padStart(2,'0');
-    Sec = String(date.getSeconds()).padStart(2,'0');
+    //Sec = String(date.getSeconds()).padStart(2,'0');
 
-    clock.innerHTML = `${Hour} : ${Min} : ${Sec}`
+    clock.innerHTML = `${Hour} : ${Min}`
 }
 
 //시계 바로 출력
