@@ -3,12 +3,12 @@ const city = document.querySelector("#city");
 const weather_description = weather.querySelector("span:nth-of-type(1)");
 const temp = weather.querySelector("span:nth-of-type(2)");
 
-const API_KEY = "5a672a5cd9a42bbf97cea2385ef83e2d"; //API : 다른 서버와 이야기할 수 있는 방법
 
 function onGeoOk(position) { //성공 시 함수는 GeolocationPosition object 하나를 JS로부터 입력받는다.
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
+  //API : 다른 서버와 이야기할 수 있는 방법
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
   fetch(url)
     .then((response) => response.json()) //fetch는 promise객체를 받는다. Promise : 자바스크립트의 비동기 작업을 처리하는 객체.
