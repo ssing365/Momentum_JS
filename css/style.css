@@ -28,7 +28,7 @@ button {
 
 #clock {
   position: absolute;
-  font-size: 120px;
+  font-size: 135px;
   color: aliceblue;
   left: 50%;
   top: 40%;
@@ -66,7 +66,7 @@ input[type="text"] {
 }
 
 li {
-  font-size: 20px;
+  font-size: 25px;
   font-family: math;
   color: aliceblue;
   font-weight: bold;
@@ -108,4 +108,35 @@ li {
   top: 60%;
   transform: translate(-50%, -50%);
   color: aliceblue;
+}
+
+#todo-list{
+  width: 400px;
+  height: 140px;
+  overflow-x: auto;
+  overflow-y: auto;
+
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+}
+
+::-webkit-scrollbar {
+  width: 10px;  /* 세로축 스크롤바 폭 너비 */
+  height: 10px;  /* 가로축 스크롤바 폭 너비 */
+}
+/* 스크롤바 막대 */
+::-webkit-scrollbar-thumb {
+  background: #d44a4a; /* 스크롤바 막대 색상 */
+  /*border: 2px solid #97357f; /* 스크롤바 막대 테두리 설정  */
+  border-radius: 12px 12px 12px 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color:#b82626;
+}
+/* 스크롤이 움직이는 뒷 배경 */
+::-webkit-scrollbar-track {
+	background: #f5f2ed; /* 스크롤바 뒷 배경 색상 */
+  border-radius: 12px 12px 12px 12px;
 }

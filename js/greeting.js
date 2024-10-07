@@ -9,6 +9,7 @@ const dd = document.querySelector("#todo-form")
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
+let greetingText = "";
 
 const saved_username = localStorage.getItem(USERNAME_KEY);
 
@@ -27,9 +28,23 @@ function onLoginSubmit(event) {
   greet_f(userName);
 }
 
+function textChange(){
+  const date = new Date();
+
+  const Hour = date.getHours();
+  if (Hour >= 5 && Hour <= 10){
+    greetingText = "Good Morning";
+  } else if(Hour >=11 && Hour <=18){
+    greetingText = "Good Afternoon";
+  } else{
+    greetingText = "Good Evening";
+  }
+}
+
 function greet_f(userName) {
+  textChange();
   greet.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerHTML = `Good afternoon, ${userName}.`;
+  greeting.innerHTML = `${greetingText}, ${userName}.`;
   question.innerHTML = `What is your main goal for today?`;
   dd.classList.remove(HIDDEN_CLASSNAME);
 }
