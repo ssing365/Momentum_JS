@@ -1,9 +1,19 @@
-# Momentum_JS
-### vanilaJS_practice
+# To-Do app (JavaScript)
 
-`노마드코더
-240926~`
+🚀 **Live Demo:** [https://ssing365.github.io/Momentum_JS/]
 
-https://nomadcoders.co/javascript-for-beginners/lobby
 
-크롬 앱 Momentum 클론코딩
+## Description
+
+To-Do 관리 앱(Momentum) 클론 코딩입니다.
+
+## API
+
+This project fetches data from the following API
+- [Weather API]([(https://openweathermap.org/current)])
+
+## 강의
+
+The following course was referenced during development:
+- [VanilaJS로 크롬 앱 만들기](https://nomadcoders.co/javascript-for-beginners)
+
